@@ -9,13 +9,11 @@ class Notes extends Component{
     }
 
     onDeleteNote(id){
-        console.log(id);
         this.props.deleteNote(id);
         
     }
 
     renderNotes(){
-        console.log(this.props);
         return this.props.notes.map(note => {
             return (
                 <li key={note._id} className="collection-item">
@@ -35,10 +33,10 @@ class Notes extends Component{
         return(
             <ReactCSSTransitionGroup
                 transitionAppear={true}
-                transitionAppearTimeout={600}
-                transitionEnterTimeout={600}
+                transitionAppearTimeout={400}
+                transitionEnterTimeout={400}
                 transitionLeaveTimeout={200}
-                transitionName={'loadList'}
+                transitionName={'loadComponent'}
             >
             <div>
                 <h3 className="center">View Notes</h3>

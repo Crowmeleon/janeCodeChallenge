@@ -5,10 +5,10 @@ const Landing = () => {
     return(
         <ReactCSSTransitionGroup
                 transitionAppear={true}
-                transitionAppearTimeout={600}
-                transitionEnterTimeout={600}
+                transitionAppearTimeout={400}
+                transitionEnterTimeout={400}
                 transitionLeaveTimeout={200}
-                transitionName={'loadList'}
+                transitionName={'loadComponent'}
             >
         <div className="landing-container">
             <h3 className="center">Note taking application</h3>
@@ -21,7 +21,7 @@ const Landing = () => {
                 <li className="collection-item"><i className="material-icons check">check</i>Add a way to remove items.</li>
                 <li className="collection-item">Publish the site somewhere it could be accessed.</li>
                 <li className="collection-item"><i className="material-icons check">check</i>Pretty things up, add an animation</li>
-                <li className="collection-item">Find a way to track if the user is inactive for more than 30 seconds. If the user is inactive, display a message. Once the user is active again, remove that message.</li>
+                <li className="collection-item"><i className="material-icons check">check</i>Find a way to track if the user is inactive for more than 30 seconds. If the user is inactive, display a message. Once the user is active again, remove that message.</li>
             </ul>
         </div>
         </ReactCSSTransitionGroup>

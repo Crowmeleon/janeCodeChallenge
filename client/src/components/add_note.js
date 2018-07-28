@@ -16,7 +16,6 @@ class addNotes extends Component{
     }
     submitNote(){
         let {Title, Author, Description} = this.state;
-        console.log({Title, Author, Description}, this.props);
         this.props.postNote({Title, Author, Description}, () => {
             this.props.history.push('/view/notes');
         });
@@ -33,10 +32,10 @@ class addNotes extends Component{
         return(
             <ReactCSSTransitionGroup
                 transitionAppear={true}
-                transitionAppearTimeout={600}
-                transitionEnterTimeout={600}
+                transitionAppearTimeout={400}
+                transitionEnterTimeout={400}
                 transitionLeaveTimeout={200}
-                transitionName={'loadList'}
+                transitionName={'loadComponent'}
             >
             <div className="row">
             <h3 className="center">Add a New Note</h3>

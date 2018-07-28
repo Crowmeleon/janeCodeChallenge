@@ -11,9 +11,7 @@ export default function(state = [], action){
             let newState = state;
             newState.push(payload);
             return newState;
-        case DELETE_NOTE: 
-        console.log(payload);
-        console.log(payload);
+        case DELETE_NOTE:
             return state.filter(note => note._id !== payload);
         default: 
             return state;
