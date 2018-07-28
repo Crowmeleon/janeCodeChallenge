@@ -38,3 +38,32 @@ html, body{
     color:#EE6E73;
     float:right;
 }
+.check{
+    color:greenyellow;
+    float:right;
+}
+.loadList-appear{
+    opacity: 0;
+}
+
+.loadList-appear.loadList-appear-active {
+    opacity: 1;
+    transition: all 0.4s linear;
+}
+
+.loadList-enter {
+    opacity: 0;
+}
+.loadList-enter.loadList-enter-active {
+    opacity: 1;
+    transition: all 0.4s linear 0.4s;
+}
+.loadList-leave {
+    opacity: 1.0;
+    position:absolute
+}
+.loadList-leave.loadList-leave-active {
+    opacity: 0;
+    transition: all 0.4s linear;
+    position:absolute;
+}

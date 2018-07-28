@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import * as actions from '../actions';
 import { connect } from 'react-redux';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class addNotes extends Component{
     constructor(props){
@@ -30,6 +31,13 @@ class addNotes extends Component{
 
     render(){
         return(
+            <ReactCSSTransitionGroup
+                transitionAppear={true}
+                transitionAppearTimeout={600}
+                transitionEnterTimeout={600}
+                transitionLeaveTimeout={200}
+                transitionName={'loadList'}
+            >
             <div className="row">
             <h3 className="center">Add a New Note</h3>
                 <div className="col s12">
@@ -56,6 +64,7 @@ class addNotes extends Component{
                     </div>
                 </div>
             </div>
+            </ReactCSSTransitionGroup>
         );
     }
 }
