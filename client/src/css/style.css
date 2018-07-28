@@ -1,0 +1,35 @@
+html, body{
+    height:100%;
+    margin:0;
+}
+/* .content{
+    min-height: calc(85vh - 10px);
+} */
+.landing-container{
+    margin-top:20px;
+}
+.navigation-container{
+    width:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:1;
+}
+.footer-container{
+    width:100%;
+    position:fixed;
+    bottom:0;
+    left:0;
+    background-color:#EE6E73;
+    box-shadow: 5px 10px 10px 10px #888888;
+}
+.footer-text{
+    text-align:center;
+    color:#FFF;
+}
+.container{
+    padding-top:65px;
+}
+.brand-logo{
+    margin-left:20px;
+}
