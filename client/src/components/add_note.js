@@ -10,15 +10,27 @@ class addNotes extends Component{
         this.state = {
             Title: '',
             Author: '',
-            Description: ''
+            Description: '',
+            fieldsComplete: false
         }
 
     }
     submitNote(){
         let {Title, Author, Description} = this.state;
-        this.props.postNote({Title, Author, Description}, () => {
-            this.props.history.push('/view/notes');
-        });
+        if(Title && Author && Description){
+            this.props.postNote({Title, Author, Description}, () => {
+                this.props.history.push('/view/notes');
+            });
+        }
+    }
+
+    fieldCheck(){
+        let {Title, Author, Description} = this.state;
+        if(Title && Author && Description){
+            this.setState({fieldsComplete: true});
+        }else{
+            this.setState({fieldsComplete: false});
+        }
     }
 
     onInputChange(e){
@@ -26,6 +38,7 @@ class addNotes extends Component{
         this.setState({
             [tag]: e.target.value
         });
+        this.fieldCheck();
     }
 
     render(){
@@ -58,7 +71,7 @@ class addNotes extends Component{
                     </div>
                     <div className="row">
                         <div className="col s12">
-                            <button onClick={this.submitNote.bind(this)} className="waves-effect waves-light btn-small">Submit</button>
+                            <button onClick={this.submitNote.bind(this)} className={this.state.fieldsComplete ? "waves-effect waves-light btn-small" : "waves-effect waves-light btn-small disabled"}>Submit</button>
                         </div>
                     </div>
                 </div>
