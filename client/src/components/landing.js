@@ -19,7 +19,7 @@ const Landing = () => {
                 <li className="collection-item"><i className="material-icons check">check</i>Add a form to the Edit page, that allows you to submit items. These items should be persisted somewhere that other pages in this app could access them. Feel free to do this however you feel is appropriate (Redux, localstorage, mongodb, etc).</li>
                 <li className="collection-item"><i className="material-icons check">check</i>On the View page, enumerate the items that have been added.</li>
                 <li className="collection-item"><i className="material-icons check">check</i>Add a way to remove items.</li>
-                <li className="collection-item">Publish the site somewhere it could be accessed.</li>
+                <li className="collection-item"><i className="material-icons check">check</i>Publish the site somewhere it could be accessed.</li>
                 <li className="collection-item"><i className="material-icons check">check</i>Pretty things up, add an animation</li>
                 <li className="collection-item"><i className="material-icons check">check</i>Find a way to track if the user is inactive for more than 30 seconds. If the user is inactive, display a message. Once the user is active again, remove that message.</li>
             </ul>
