@@ -3,7 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 
 const Navigation = withRouter(props => {
     const {location: {pathname}} = props;
-    console.log(pathname);
     return(
         <nav className="navigation-container">
             <div className="nav-wrapper">

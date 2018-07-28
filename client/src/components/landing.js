@@ -14,9 +14,6 @@ const Landing = () => {
                 <li className="collection-item">Publish the site somewhere it could be accessed.</li>
                 <li className="collection-item">Pretty things up, add an animation</li>
                 <li className="collection-item">Find a way to track if the user is inactive for more than 30 seconds. If the user is inactive, display a message. Once the user is active again, remove that message.</li>
-                <li className="collection-item">Find a way to track if the user is inactive for more than 30 seconds. If the user is inactive, display a message. Once the user is active again, remove that message.</li>
-                <li className="collection-item">Find a way to track if the user is inactive for more than 30 seconds. If the user is inactive, display a message. Once the user is active again, remove that message.</li>
-                <li className="collection-item">Find a way to track if the user is inactive for more than 30 seconds. If the user is inactive, display a message. Once the user is active again, remove that message.</li>
             </ul>
         </div>
     );

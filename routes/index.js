@@ -2,10 +2,6 @@ const mongoose = require('mongoose');
 const Note = mongoose.model('Note');
 
 module.exports = app => {
-    app.get('/', (req, res) => {
-        // new Note({Title: "This is test", Author: "Peter Martinez", Description: "This is a new note"}).save();
-        res.send('This is the Jane Api');
-    });
 
     app.post('/api/add/note', (req, res) => {
         let {Title, Author, Description} = req.body;
@@ -17,10 +13,11 @@ module.exports = app => {
         });
     });
 
-    app.delete('/api/delete/note', (req, res) => {
-        Note.findById({_id: req.body.id}).remove()
-        .then(note => {
-            res.send("Note Deleted").status(200);
+    app.delete('/api/delete/note/:id', (req, res) => {
+        let {id} = req.params;
+        Note.findById({_id: id}).remove()
+        .then(() => {
+            res.send({id: id}).status(200);
         })
         .catch(err => {
             res.send(err).status(500);

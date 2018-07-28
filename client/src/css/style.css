@@ -29,7 +29,12 @@ html, body{
 }
 .container{
     padding-top:65px;
+    padding-bottom:60px;
 }
 .brand-logo{
     margin-left:20px;
+}
+.delete{
+    color:#EE6E73;
+    float:right;
 }
