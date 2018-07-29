@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Note = mongoose.model('Note');
+const path = require('path');
 
 module.exports = app => {
 
@@ -32,5 +33,9 @@ module.exports = app => {
         .catch(err => {
             res.send(err).status(500);
         });
-    })
+    });
+
+    app.get('*', (res, res) => {
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+      });
 }; 
